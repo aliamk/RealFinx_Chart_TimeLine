@@ -1,0 +1,183 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+
+html, body {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    height: 100%;
+    width: 15vw;
+    background-color: #212121;
+    float: left;    
+    margin-right: 1em;
+    padding-bottom: 142em;
+    flex-direction: column;
+}
+
+.white-background {
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    background-color: white;
+    margin: 1em 0;
+    width: 80vw;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#main {
+    flex-direction: column;
+}
+
+#searchBar {   
+    margin-top: 1em;
+    padding: 0;
+}
+
+i {
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    margin: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: grey;
+}
+
+input {   
+    width: 30vw;
+    padding: 0.4em;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    caret-color:  #CC2431;
+}
+
+input[type=text] {
+    font-size: 1em;
+    opacity: 0.75;
+    outline : none;
+}
+
+h1 {
+    text-align: left;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    color:#545454;
+    margin-top: 0.35em;
+    margin-bottom: 0.15em;
+}
+
+#company_intro {    
+    padding: 1em;
+    /* border: 2px solid red; */
+    background-color: white;    
+}
+
+h5 {
+    color: black;
+}
+
+h6 {
+    color: #545454;  
+}
+
+#company-name {
+    color: #D11400;    
+}
+
+#chart-container {
+    padding: 0.5em;
+    background-color: white;
+}
+
+#chartdiv {    
+    /* height:85vh; */
+    /* min-height: 50vh;         */
+    /* margin-bottom: 2em; */
+    padding: 0.5em;
+    width: 100%;
+    flex-direction: column;
+    background-color: whitesmoke;
+  }
+
+  #chartdata {    
+    
+  }
+  
+  #chartdata table {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  
+#chartdata th {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    font-size: 1.25em;
+    border-bottom: 2px solid #CC2431;
+}
+
+#chartdata td {
+    width: 200px;
+}
+
+
+@media screen and (max-device-width: 800px) {
+    #sidebar {
+        display: none;        
+    }
+    #searchBar {   
+        margin: 0.15em;
+        float: right;
+    }
+    input {
+        padding: 0.4em;
+    }
+
+    h1 {
+        margin: 0.15em;
+    }
+    #company-intro {
+        width: 100vw; 
+    }
+    #chartdiv {
+        height:30vh;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-device-width: 500px) {
+    #searchBar {   
+        display: none;  
+    }
+    h1 {
+        margin-top: 0.5em;   
+        font-size: 20px;     
+    }
+    #company-intro {
+        width: 100vw; 
+    }
+    #chartdiv {
+        width:100vw;
+        margin-bottom: 1.5em;
+        margin-top: 1em;
+    }
+    #chartdata th {
+        font-size: 0.85em;
+        border-bottom: 2px solid #CC2431;
+    }
+}
