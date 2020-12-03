@@ -6,7 +6,19 @@ am4core.ready(function() {
     // Themes end
     
     var chart = am4core.create("chartdiv-pie", am4charts.PieChart3D);
+    // chart.responsive.enabled = true;
+
+    // chart.responsive.rules.push({
+    //     relevant: function(target) {
+    //         if (target.pixelWidth <= 400) {
+    //           return true;
+    //         }
+    //         return false;
+    //       }
+    // });
+
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+    chart.hiddenState.properties.angle = -90; // rotate on initial load
     
     // chart.legend = new am4charts.Legend();
     
@@ -14,6 +26,7 @@ am4core.ready(function() {
       {
         country: "Lithuania",
         litres: 501.9
+        // "pulled": true
       },
       {
         country: "Czech Republic",
@@ -44,7 +57,9 @@ am4core.ready(function() {
     series.dataFields.value = "litres";
     series.dataFields.category = "country";
     series.labels.template.bent = true;
-    series.labels.template.radius = 30;
+    series.labels.template.radius = 25;
+    series.labels.template.fontSize = "0.75em";
     series.ticks.template.disabled = true;
     series.alignLabels = false;
+    // series.slices.template.propertyFields.isActive = "pulled";
     }); // end am4core.ready()

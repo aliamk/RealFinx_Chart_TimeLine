@@ -6,6 +6,16 @@ am4core.ready(function() {
     // Themes end
     
     var chart = am4core.create("chartdiv-column", am4charts.XYChart);
+    chart.responsive.enabled = true;
+
+    chart.responsive.rules.push({
+        relevant: function(target) {
+            if (target.pixelWidth <= 400) {
+              return true;
+            }
+            return false;
+          }
+    });
     chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
     
     chart.data = [
