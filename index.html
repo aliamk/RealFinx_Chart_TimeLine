@@ -13,6 +13,7 @@
     <script src="https://cdn.amcharts.com/lib/4/plugins/timeline.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/plugins/bullets.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/dataviz.js"></script>
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -43,9 +44,9 @@
         </div>
 
         <div class="white-background" id="three-charts">
-            <div class="box" id="box-one"></div>
-            <div class="box" id="box-two"></div>
-            <div class="box" id="box-three"></div>
+            <div class="box" id="chartdiv-pie"></div>
+            <div class="box" id="chartdiv-column"></div>
+            <div class="box" id="chartdiv-radiuspie"></div>
         </div>
 
         <div class="white-background" id="fund-energy">
@@ -69,10 +70,15 @@
             <h6>Fund Timeline</h6>
             <div class="white-background" id="chartdiv"></div>
         </div>
+
+
+        <!-- Data Table -->
         <div id="chartdata"></div>
 
     </div>
-
+    <script src="script-pie.js"></script>
+    <script src="script-column.js"></script>
+    <script src="script-radiuspie.js"></script>
     <script src="script.js"></script>
     
 </body>
