@@ -32,7 +32,7 @@ am4core.useTheme(am4themes_animated);
     //   "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDkwLjcgNDkwLjciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5MC43IDQ5MC43OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Zz4NCgkJPHBhdGggZD0iTTQzNi4yLDE1NC42SDE4Mi40Yy0xMi40LDAtMzMuMSw0LjctMzMuMSwzNi42VjI0MGgzMjB2LTQ4LjhDNDY5LjMsMTU5LjQsNDQ4LjYsMTU0LjYsNDM2LjIsMTU0LjZ6Ii8+DQoJPC9nPg0KPC9nPg0KPGc+DQoJPGc+DQoJCTxwb2x5Z29uIHBvaW50cz0iODAuMywyNTAuNiAzMiwyNTAuNiAzMiw4MCAwLDgwIDAsNDEwLjcgMzIsNDEwLjcgMzIsMzI1LjMgNDU4LjcsMzI1LjMgNDU4LjcsNDEwLjYgNDkwLjcsNDEwLjYgNDkwLjcsMjUwLjYgCQkNCgkJCSIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8Y2lyY2xlIGN4PSI4NS4zIiBjeT0iMTk3LjMiIHI9IjQ0LjciLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==";
 
     let chart = am4core.create("chartdiv", am4plugins_timeline.CurveChart);
-    chart.curveContainer.padding(100, 20, 50, 20);
+    chart.curveContainer.padding(50, 20, 50, 20);
     chart.maskBullets = false;
 
     let colorSet = new am4core.ColorSet();
@@ -45,113 +45,113 @@ am4core.useTheme(am4themes_animated);
     chart.data = [
       {
         category: "",
-        start: "2020-01-01",
+        start: "2019-12-01",
         end: "2020-01-01",
-        color: colorSet.getIndex(15),
+        color: am4core.color("#D11400"),
         icon: alarm,
         text: "Wake up!",
       },
       {
         category: "",
-        start: "2020-02-10",
-        start: "2020-02-10",
-        color: colorSet.getIndex(14),
+        start: "2020-01-01",
+        end: "2020-02-01",
+        color: am4core.color("red").lighten(0.05),
         icon: water,
         text: "Drink water",
       },
       {
         category: "",
-        start: "2020-03-10",
-        end: "2020-03-10",
-        color: colorSet.getIndex(13),
+        start: "2020-02-01",
+        end: "2020-03-01",
+        color: am4core.color("red").lighten(0.1),
         icon: exercise,
         text: "Exercise",
       },
       {
         category: "",
-        start: "2020-04-10",
-        end: "2020-04-10",
-        color: colorSet.getIndex(12),
+        start: "2020-03-01",
+        end: "2020-04-01",
+        color: am4core.color("red").lighten(0.15),
         icon: breakfast,
         text: "Have breakfast",
       },
       {
         category: "",
-        start: "2020-05-10",
-        end: "2020-05-10",
-        color: colorSet.getIndex(11),
+        start: "2020-04-01",
+        end: "2020-05-01",
+        color: am4core.color("red").lighten(0.2),
         icon: car,
         text: "Drive to work",
       },
       {
         category: "",
-        start: "2020-06-10",
-        end: "2020-06-10",
-        color: colorSet.getIndex(10),
+        start: "2020-05-01",
+        end: "2020-06-01",
+        color: am4core.color("red").lighten(0.25),
         icon: work,
         text: "Work",
       },
       {
         category: "",
-        start: "2020-07-10",
-        end: "2020-07-10",
-        color: colorSet.getIndex(9),
+        start: "2020-06-01",
+        end: "2020-07-01",
+        color: am4core.color("red").lighten(0.3),
         icon: coffee,
         text: "Coffee",
       },
       {
         category: "",
-        start: "2020-08-10",
-        end: "2020-08-10",
-        color: colorSet.getIndex(8),
+        start: "2020-07-01",
+        end: "2020-08-01",
+        color: am4core.color("red").lighten(0.35),
         icon: dinner,
         text: "Dinner",
       },
       {
         category: "",
-        start: "2020-09-10",
-        end: "2020-09-10",
-        color: colorSet.getIndex(7),
+        start: "2020-08-01",
+        end: "2020-09-01",
+        color: am4core.color("red").lighten(0.4),
         icon: coffee,
         text: "Coffee",
       },
       {
         category: "",
-        start: "2020-10-10",
-        end: "2020-10-10",
-        color: colorSet.getIndex(6),
+        start: "2020-09-01",
+        end: "2020-10-01",
+        color: am4core.color("red").lighten(0.45),
         icon: car,
         text: "Drive home",
       },
       {
         category: "",
-        start: "2020-11-10",
-        end: "2020-11-10",
-        color: colorSet.getIndex(5),
+        start: "2020-10-01",
+        end: "2020-11-01",
+        color: am4core.color("red").lighten(0.5),
         icon: home,
         text: "Home!",
       },
       {
         category: "",
-        start: "2020-12-10",
-        end: "2020-12-10",
-        color: colorSet.getIndex(4),
+        start: "2020-11-01",
+        end: "2020-12-01",
+        color: am4core.color("red").lighten(0.55),
         icon: book,
         text: "Read a bit",
       },
     //   {
     //     category: "",
-    //     start: "2020-01-10 21:30",
-    //     end: "2020-01-10 22:00",
-    //     color: colorSet.getIndex(6),
-    //     icon: beer,
-    //     text: "Have a beer",
+    //     start: "2020-12-01",
+    //     end: "2021-01-01",
+    //     color: am4core.color("red").lighten(0.6),
+    //     // icon: beer,
+    //     // text: "Have a beer",
     //   },
     //   {
     //     category: "",
     //     start: "2020-01-10 22:00",
     //     end: "2020-01-10 22:15",
-    //     color: colorSet.getIndex(5),
+    //     color: /*colorSet.getIndex(5)*/,
     //     icon: beer,
     //     text: "Have another beer",
     //   },
@@ -159,7 +159,7 @@ am4core.useTheme(am4themes_animated);
     //     category: "",
     //     start: "2020-01-10 22:15",
     //     end: "2020-01-10 23:00",
-    //     color: colorSet.getIndex(4),
+    //     color: /*colorSet.getIndex(4)*/,
     //     icon: dance,
     //     text: "Dance!",
     //   },
@@ -167,7 +167,7 @@ am4core.useTheme(am4themes_animated);
     //     category: "",
     //     start: "2020-01-10 23:00",
     //     end: "2020-01-11 00:00",
-    //     color: colorSet.getIndex(3),
+    //     color: /*colorSet.getIndex(3)*/,
     //     icon: drink,
     //     text: "Martini!",
     //   },
@@ -175,7 +175,7 @@ am4core.useTheme(am4themes_animated);
     //     category: "",
     //     start: "2020-01-11 00:00",
     //     end: "2020-01-11 01:00",
-    //     color: colorSet.getIndex(2),
+    //     color: /*colorSet.getIndex(2)*/,
     //     icon: drunk,
     //     text: "Damn...",
     //   },
@@ -183,7 +183,7 @@ am4core.useTheme(am4themes_animated);
     //     category: "",
     //     start: "2020-01-11",
     //     end: "2020-12-25",
-    //     color: colorSet.getIndex(1),
+    //     color: /*colorSet.getIndex(1)*/,
     //     icon: bed,
     //     text: "Bye bye",
     //   },
@@ -194,70 +194,76 @@ am4core.useTheme(am4themes_animated);
 
     let categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "category";
-    categoryAxis.renderer.grid.template.disabled = true;
-    categoryAxis.renderer.labels.template.paddingRight = 25;
-    categoryAxis.renderer.minGridDistance = 10;
+    categoryAxis.renderer.grid.template.disabled = false;
+    // categoryAxis.renderer.labels.template.paddingRight = -10;
+    // categoryAxis.renderer.minGridDistance = 150;
     categoryAxis.renderer.innerRadius = 10;
-    categoryAxis.renderer.radius = 30;
+    categoryAxis.renderer.radius = 20;                          // 'thickness' of red horixontal bar
 
     let dateAxis = chart.xAxes.push(new am4charts.DateAxis());
-
     dateAxis.renderer.points = getPoints();
 
     dateAxis.renderer.autoScale = false;
     dateAxis.renderer.autoCenter = true;
-    dateAxis.renderer.minGridDistance = 80;
+    dateAxis.renderer.minGridDistance = 50;
     dateAxis.baseInterval = { count: 1, timeUnit: /*"minute"*/"month" };
-    dateAxis.renderer.tooltipLocation = 0;
-    dateAxis.renderer.line.strokeDasharray = "1,4";
-    dateAxis.renderer.line.strokeOpacity = 0.8;
-    dateAxis.tooltip.background.fillOpacity = 0.2;
-    dateAxis.tooltip.background.cornerRadius = 5;
-    dateAxis.tooltip.label.fill = new am4core.InterfaceColorSet().getFor("alternativeBackground");
-    dateAxis.tooltip.label.paddingTop = 7;
-    dateAxis.endLocation = 0;
-    dateAxis.startLocation = /*-0.5*/ -0.75;
-    dateAxis.min = new Date(2020, 01, 10).getTime();
+    // dateAxis.renderer.tooltipLocation = -100;
+    dateAxis.renderer.line.strokeDasharray = "1,10";
+    dateAxis.renderer.line.strokeOpacity = 0.8;                 // dotted line between months
+    dateAxis.tooltip.background.fillOpacity = 0;      
+    // dateAxis.tooltip.background.cornerRadius = 5;
+    // dateAxis.tooltip.label.fill = new am4core.InterfaceColorSet().getFor("alternativeBackground");
+    // dateAxis.tooltip.label.paddingTop = 50;
+    dateAxis.endLocation = -0.25;
+    dateAxis.startLocation = -1.25;
+    dateAxis.min = new Date(2020, 01, 01).getTime();
     dateAxis.max = new Date(2020, 12, 31).getTime();
 
-    let labelTemplate = dateAxis.renderer.labels.template;
-    labelTemplate.verticalCenter = "middle";
-    labelTemplate.fillOpacity = 0.6;
-    labelTemplate.background.fill = new am4core.InterfaceColorSet().getFor("background");
-    labelTemplate.background.fillOpacity = 1;
-    labelTemplate.fill = new am4core.InterfaceColorSet().getFor("text");
-    labelTemplate.padding(7, 7, 7, 7);
+    /* === BACKGROUND TO MONTHS LABELS === */
+    // let labelTemplate = dateAxis.renderer.labels.template;
+    // labelTemplate.verticalCenter = "middle";
+    // labelTemplate.fillOpacity = 0.6;
+    // // labelTemplate.background.fill = new am4core.InterfaceColorSet().getFor("background");
+    // labelTemplate.background.fillOpacity = 1;
+    // labelTemplate.fill = new am4core.InterfaceColorSet().getFor("text");
+    // labelTemplate.padding(7, 7, 7, 7);
 
     let series = chart.series.push(new am4plugins_timeline.CurveColumnSeries());
-    series.columns.template.height = am4core.percent(30);
+    series.columns.template.height = am4core.percent(100);
 
     series.dataFields.openDateX = "start";
     series.dataFields.dateX = "end";
     series.dataFields.categoryY = "category";
     series.baseAxis = categoryAxis;
-    series.columns.template.propertyFields.fill = "color"; // get color from data
-    series.columns.template.propertyFields.stroke = "color";
-    series.columns.template.strokeOpacity = 0;
-    series.columns.template.fillOpacity = 0.6;
+    
+    series.columns.template.propertyFields.fill = "color";          // get color from data
+    // series.columns.template.propertyFields.stroke = am4core.color("red");
+    series.columns.template.strokeOpacity = 0.5;
+    series.columns.template.fillOpacity = 0.8;
 
     let imageBullet1 = series.bullets.push(new am4plugins_bullets.PinBullet());
     imageBullet1.background.radius = 18;
-    imageBullet1.locationX = 1;
-    imageBullet1.propertyFields.stroke = "color";
-    imageBullet1.background.propertyFields.fill = "color";
+    imageBullet1.locationX = -0.5;                                  // aligning bullets with the date axis
+    // imageBullet1.propertyFields.stroke = "color";
+    // imageBullet1.background.propertyFields.fill =  "color";
     imageBullet1.image = new am4core.Image();
     imageBullet1.image.propertyFields.href = "icon";
     imageBullet1.image.scale = 0.7;
     imageBullet1.circle.radius = am4core.percent(100);
-    imageBullet1.background.fillOpacity = 0.8;
-    imageBullet1.background.strokeOpacity = 0;
+    imageBullet1.background.fillOpacity = 0;                // Fill color off
+    imageBullet1.background.strokeOpacity = 1;              // Stroke visible
     imageBullet1.dy = -2;
-    imageBullet1.background.pointerBaseWidth = 10;
-    imageBullet1.background.pointerLength = 10;
+    imageBullet1.background.pointerBaseWidth = 5;
+    imageBullet1.background.pointerLength = 25;
     imageBullet1.tooltipText = "{text}";
 
     series.tooltip.pointerOrientation = "up";
-
+    series.tooltip.background.fillOpacity = 0;
+    series.tooltip.background.pointerLength = 70;
+    series.tooltip.pointerBaseWidth = 5;
+    series.tooltip.background.stroke = am4core.color("#D11400");
+    series.tooltip.strokeOpacity = 1;
+    
     imageBullet1.background.adapter.add("pointerAngle", (value, target) => {
       if (target.dataItem) {
         let position = dateAxis.valueToPosition(target.dataItem.openDateX.getTime());
@@ -267,29 +273,19 @@ am4core.useTheme(am4themes_animated);
     });
 
     let hs = imageBullet1.states.create("hover");
-    hs.properties.scale = 1.3;
+    hs.properties.scale = 1.5;
     hs.properties.opacity = 1;
 
-    let textBullet = series.bullets.push(new am4charts.LabelBullet());
-    textBullet.label.propertyFields.text = "text";
-    textBullet.disabled = true;
-    textBullet.propertyFields.disabled = "textDisabled";
-    textBullet.label.strokeOpacity = 0;
-    textBullet.locationX = 1;
-    textBullet.dy = -100;
-    textBullet.label.textAlign = "middle";
-    /*
-      chart.scrollbarX = new am4core.Scrollbar();
-      chart.scrollbarX.align = "center";
-      chart.scrollbarX.width = am4core.percent(75);
-      chart.scrollbarX.parent = chart.curveContainer;
-      chart.scrollbarX.height = 300;
-      chart.scrollbarX.orientation = "vertical";
-      chart.scrollbarX.x = 128;
-      chart.scrollbarX.y = -140;
-      chart.scrollbarX.isMeasured = false;
-      chart.scrollbarX.opacity = 0.5;
-    */
+    // let textBullet = series.bullets.push(new am4charts.LabelBullet());
+    // textBullet.label.propertyFields.text = "text";
+    // textBullet.disabled = true;
+    // textBullet.propertyFields.disabled = "textDisabled";
+    // textBullet.label.strokeOpacity = 0;
+    // textBullet.locationX = 1;
+    // textBullet.dy = -100;
+    // textBullet.label.textAlign = "middle";
+
+
     let cursor = new am4plugins_timeline.CurveCursor();
     chart.cursor = cursor;
     cursor.xAxis = dateAxis;
@@ -297,10 +293,10 @@ am4core.useTheme(am4themes_animated);
     cursor.lineY.disabled = true;
     cursor.lineX.disabled = true;
 
-    dateAxis.renderer.tooltipLocation2 = 0;
-    categoryAxis.cursorTooltipEnabled = false;
+    // dateAxis.renderer.tooltipLocation2 = 0;
+    // categoryAxis.cursorTooltipEnabled = false;
 
-    chart.zoomOutButton.disabled = true;
+    // chart.zoomOutButton.disabled = true;
 
     let previousBullet;
 
@@ -336,7 +332,26 @@ am4core.useTheme(am4themes_animated);
       let points = [
         { x: -550, y: 0 },
         { x: 800, y: 0 },
+        // { x: -550, y: -100 },
+        // { x: 10, y: -100 },
+        // { x: 30, y: -50 },
+        // { x: 10, y: -10 },
+        // { x: -550, y: 0 },
       ];
+
+          /*
+      chart.scrollbarX = new am4core.Scrollbar();
+      chart.scrollbarX.align = "center";
+      chart.scrollbarX.width = am4core.percent(75);
+      chart.scrollbarX.parent = chart.curveContainer;
+      chart.scrollbarX.height = 300;
+      chart.scrollbarX.orientation = "vertical";
+      chart.scrollbarX.x = 128;
+      chart.scrollbarX.y = -140;
+      chart.scrollbarX.isMeasured = false;
+      chart.scrollbarX.opacity = 0.5;
+    */
+
       /*
       let w = 300;
       let h = 300;

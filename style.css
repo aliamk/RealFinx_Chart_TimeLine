@@ -32,8 +32,28 @@ html, body {
     border-radius: 5px;
     background-color: white;
     margin: 1em 0;
+    padding: 0.5em;
     width: 80vw;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+#three-charts {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    background-color: whitesmoke;    
+    width:40%;
+    height: 60vh;
+    margin: 0.55em;
+    border: 2px solid red;
+    border-radius: 5px;
 }
 
 #main {
@@ -86,6 +106,14 @@ h1 {
     background-color: white;    
 }
 
+.fund-attributes-title {
+    font-size: 12px;
+}
+
+#fund-attributes h6 {
+    color: black;
+}
+
 h5 {
     color: black;
 }
@@ -104,18 +132,16 @@ h6 {
 }
 
 #chartdiv {    
-    /* height:85vh; */
-    /* min-height: 50vh;         */
-    /* margin-bottom: 2em; */
-    padding: 0.5em;
+    min-height: 50vh;        
+    padding: 0;
     width: 100%;
     flex-direction: column;
     background-color: whitesmoke;
   }
 
-  #chartdata {    
+  /* #chartdata {    
     
-  }
+  } */
   
   #chartdata table {
     width: 100%;
@@ -136,6 +162,19 @@ h6 {
 }
 
 
+@media screen and (max-device-width: 1000px) {
+    #three-charts {
+        flex-direction: column;        
+        width:100%;
+    }
+    .box {        
+        width: 98%;
+        height: 40vh;
+        margin: 0.5em;
+    }
+}
+
+
 @media screen and (max-device-width: 800px) {
     #sidebar {
         display: none;        
@@ -147,7 +186,6 @@ h6 {
     input {
         padding: 0.4em;
     }
-
     h1 {
         margin: 0.15em;
     }
@@ -168,13 +206,12 @@ h6 {
         margin-top: 0.5em;   
         font-size: 20px;     
     }
-    #company-intro {
-        width: 100vw; 
+    .white-background {        
+        margin: 1em, 0.5em;
+        width: 100vw;        
     }
     #chartdiv {
-        width:100vw;
-        margin-bottom: 1.5em;
-        margin-top: 1em;
+        width:100%;
     }
     #chartdata th {
         font-size: 0.85em;
